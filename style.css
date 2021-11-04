@@ -1,0 +1,401 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;1,300;1,400&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  margin: 0px;
+  font-size: 10px;
+}
+
+body {
+  overflow-x: hidden;
+  background: #202020;
+}
+
+header {
+  background-image: url(https://raw.githubusercontent.com/eniabellver/fcc-tribute-page/master/images/MargaretH_color.jpg);
+  background-position: center 0;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+  height: 75vh;
+}
+
+#main-titles {
+  position: relative;
+  left: 7vw;
+  top: 50vh;
+  text-align: left;
+}
+
+#title {
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+  text-shadow: 2px 2px 4px #141414;
+  font-size: calc(2.5rem + 2.5vw);
+  line-height: 1rem;
+}
+
+#subtitle {
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+  text-shadow: 1px 1px 3px #141414;
+  font-size: calc(1.6rem + 1.6vw);
+}
+
+.about {
+  position: center;
+  margin-left: 7vw;
+  margin-right: 7vw;
+  padding-top: 1em;
+  padding-bottom: .5em;
+}
+
+#about-title {
+  color: white;
+  font-family: 'Oxygen', sans-serif;
+  text-align: center;
+  font-size: calc(1rem + 1.5vw);
+  line-height: 1.5rem;
+}
+
+#tribute-info {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: calc(.7rem + 1vw);
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+
+#timeline-title {
+  color: white;
+  text-align: center;
+  font-family: 'Oxygen', sans-serif;
+  font-size: calc(1rem + 1.5vw);
+  line-height: .7rem;
+  padding-top: .5em;
+  padding-bottom: .5em;
+}
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: #dedede;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: #ffffff;
+  border: 2px solid #707070;
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background: #dedede;
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 14px);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  z-index: 1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .content {
+  padding: 40px 50px 40px 55px;
+  background: #dedede;
+  position: relative;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.container.right .content {
+  padding: 40px 50px 40px 55px;
+  border-radius: 50px 50px 50px 50px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  font-size: calc(.7rem + 1vw);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color: #202020;
+}
+
+.container .content p {
+  margin: 0;
+  font-size: calc(1rem + 0.5vw);
+  font-family: 'Open Sans', sans-serif;
+  text-align: justify;
+  font-weight: light;
+  line-height: 1.5em;
+  color: #000000;
+}
+
+.img-timeline {
+  width: 600px;
+  max-width: 100%;
+  height: auto;
+  padding-top: 2em;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  filter: drop-shadow(2px 2px 7px rgba(0, 0, 0, 0.3));
+}
+
+@media (max-width: 650px) {
+  .timeline::after {
+    left: 90px;
+  }
+
+  .container {
+    width: 100%;
+    padding-left: 120px;
+    padding-right: 30px;
+  }
+
+  .container.right {
+    left: 0%;
+  }
+
+  .container.left::after, 
+  .container.right::after {
+    left: 82px;
+  }
+
+  .container.left::before,
+  .container.right::before {
+    left: 100px;
+    border-color: transparent #006E51 transparent transparent;
+  }
+
+  .container.left .date,
+  .container.right .date {
+    right: auto;
+    left: 15px;
+  }
+
+  .container.left .content,
+  .container.right .content {
+    padding: 30px 30px 30px 40px;
+    border-radius: 50px 0 0 50px;
+  }
+}
+
+q {
+  font-style: italic;
+  line-height: 1rem;
+}
+
+#quote {
+  background-color: #dedede;
+  text-align: center;
+  border-radius: 30px 30px 30px 30px;
+  margin: 0 auto;
+  margin-left: 20vw;
+  margin-right: 20vw;
+}
+
+blockquote {
+  color: #202020;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: calc(.7rem + 1.2vw);
+  padding: 30px 10px 30px 10px;
+}
+
+#img-div {
+  margin: 0 auto;
+  margin-left: 7vw;
+  margin-right: 7vw;
+}
+
+#image {
+  display: block;
+  margin: 0 auto;
+  width: 150rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px 20px 20px 20px;
+}
+
+#img-caption {
+  color: #dedede;
+  text-align: center;
+  padding-top: .7em;
+  font-size: calc(1rem + .5vw);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+}
+
+footer {
+  position: center;
+  text-align: center;
+  margin: 0 auto;
+  background-color: #dedede;
+  padding-top: .5em;
+  padding-bottom: 1.5em;
+  margin-top: 50px;
+}
+
+#more-info {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(1rem + 0.5vw);
+}
+
+#credit-info {
+  font-family: 'Open Sans', sans-serif;
+  font-size: calc(1rem + 0.4vw);
+}
+
+footer a {
+  color: black;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #505050;
+  font-weight: bold;
+}
+
+@media only screen and (max-width: 650px) {
+  header {
+    background-image: url(https://raw.githubusercontent.com/eniabellver/fcc-tribute-page/master/images/MargaretH_color.jpg);
+    height: 12.5vh;
+    background-size: 100% auto !important;
+  }
+  #main-titles {
+    position: relative;
+    top: calc(1rem + 7vh);
+    text-align: left;
+  }
+  #title {
+    font-size: calc(1.3rem + 2vw);
+    line-height: .5rem;
+  }
+  #subtitle {
+    font-size: calc(.7rem + 2vw);
+  }
+  #about-title{
+    font-size: 20px;
+  }
+  #tribute-info {
+    font-size: 14px;
+    line-height: 1.5em;
+  }
+  #timeline-title{
+    font-size: 20px;
+  }
+  .container .date {
+  top: calc(50% - 13px);
+  font-size: 16px;
+  }
+  .container .content h2 {
+  font-size: 16px;
+  }
+  .container .content p {
+  font-size: 14px;
+  line-height: 1.5em;
+  text-align: left;
+  }
+  .img-timeline {
+    display: none;
+  }
+  #quote {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  blockquote {
+    font-size: 18px;
+    padding: 10px 7x 10px 7px;
+  }
+  #img-div {
+    margin-left: 2em;
+    margin-right: 2em;
+  }
+  #img-caption {
+    font-size: 14px;
+  }
+  footer {
+    padding: 1em 3em 1em 3em;
+    margin-top: 25px;
+  }
+  #more-info {
+    font-size: 16px;
+  }
+  #credit-info {
+    font-size: 14px;
+  }
+}
